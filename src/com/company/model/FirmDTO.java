@@ -1,7 +1,11 @@
 package com.company.model;
 
-import com.company.intfcs.ILanguage;
+import com.company.interfaces.ILanguage;
+import com.company.interfaces.ISender;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class FirmDTO {
@@ -10,6 +14,8 @@ public class FirmDTO {
     private String phoneNumber;
     private String email;
     private ILanguage language;
+    private List<ISender> sender = new ArrayList<>();
+    private HashMap<LocalDate, Double> bill = new HashMap<>();
 
     public FirmDTO() {}
 
@@ -51,4 +57,19 @@ public class FirmDTO {
         this.language = language;
     }
 
+    public List<ISender> getSender() {
+        return sender;
+    }
+
+    public void setSender(List<ISender> sender) {
+        this.sender = sender;
+    }
+
+    public HashMap<LocalDate, Double> getBill() {
+        return bill;
+    }
+
+    public void setBill(HashMap<LocalDate, Double> bill) {
+        this.bill = bill;
+    }
 }

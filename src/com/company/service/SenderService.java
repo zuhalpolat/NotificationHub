@@ -1,14 +1,17 @@
 package com.company.service;
 
-import com.company.intfcs.ISender;
-import com.company.model.FirmDTO;
+import com.company.exceptions.NullEmailException;
+import com.company.exceptions.NullSmsException;
+import com.company.interfaces.ISender;
+import com.company.model.MessageDTO;
 
 import java.util.List;
 
 public class SenderService {
 
-    public void sendNotification(FirmDTO firmDTO, List<ISender> senders){
+    public void sendNotification(MessageDTO messageDTO, List<ISender> senders) throws NullEmailException, NullSmsException {
 
-        for(ISender sender: senders) sender.send(firmDTO);
+        for(ISender sender: senders)
+            sender.send(messageDTO);
     }
 }

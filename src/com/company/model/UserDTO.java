@@ -10,10 +10,10 @@ public class UserDTO {
     public UserDTO(){}
 
     public UserDTO(String name, String surname, String email, String phoneNumber) {
-        this.name = getName();
-        this.surname = getSurname();
-        this.email = getEmail();
-        this.phoneNumber = getPhoneNumber();
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getName() {
