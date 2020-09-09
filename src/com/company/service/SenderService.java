@@ -1,8 +1,7 @@
 package com.company.service;
 
-import com.company.ISender;
+import com.company.intfcs.ISender;
 import com.company.model.FirmDTO;
-import com.company.model.UserDTO;
 
 import java.util.List;
 

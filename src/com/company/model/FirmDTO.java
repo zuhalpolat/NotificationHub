@@ -1,6 +1,6 @@
 package com.company.model;
 
-import com.company.ILanguage;
+import com.company.intfcs.ILanguage;
 
 import java.util.List;
 
@@ -9,11 +9,11 @@ public class FirmDTO {
     private String name;
     private String phoneNumber;
     private String email;
-    private String text;
+    private ILanguage language;
 
     public FirmDTO() {}
 
-    public FirmDTO(String name, String phoneNumber, String email, ILanguage language, List<UserDTO> users) {
+    public FirmDTO(String name, String phoneNumber, String email, ILanguage language) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -43,11 +43,12 @@ public class FirmDTO {
         this.email = email;
     }
 
-    public String getText() {
-        return text;
+    public ILanguage getLanguage() {
+        return language;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setLanguage(ILanguage language) {
+        this.language = language;
     }
+
 }
